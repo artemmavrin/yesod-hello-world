@@ -32,11 +32,14 @@ greet name = selectRep $ do
   provideRep greetJson
   provideRep greetHtml
   where
+    greeting :: Text
+    greeting = "Hello, " <> name <> "!"
+
     greetJson :: Handler Value
-    greetJson = return $ object ["name" .= name]
+    greetJson = return $ object ["greeting" .= greeting]
 
     greetHtml :: Handler Html
-    greetHtml = defaultLayout [whamlet|Hello, #{name}!|]
+    greetHtml = defaultLayout [whamlet|#{greeting}|]
 
 main :: IO ()
 main = do
