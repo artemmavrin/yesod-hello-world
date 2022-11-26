@@ -1,6 +1,6 @@
 {-# LANGUAGE TemplateHaskell #-}
 
-module PostHello (PostHello (name)) where
+module Model.PostHello (PostHello (name)) where
 
 import Data.Aeson.TH (deriveJSON, defaultOptions)
 import Data.Text (Text)

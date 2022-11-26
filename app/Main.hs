@@ -1,6 +1,6 @@
 module Main (main) where
 
-import qualified HelloWorld (main)
+import qualified Application (main)
 
 main :: IO ()
-main = HelloWorld.main
+main = Application.main
