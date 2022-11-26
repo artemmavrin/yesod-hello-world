@@ -20,6 +20,9 @@ description:         Please see the README on GitHub at <https://github.com/arte
 
 dependencies:
 - base >=4.7 && <5
+- yesod >=1.6 && <1.7
+- aeson
+- text
 
 ghc-options:
 - -Wall

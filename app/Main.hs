@@ -1,6 +1,6 @@
 module Main (main) where
 
-import Lib
+import qualified HelloWorld (main)
 
 main :: IO ()
-main = someFunc
+main = HelloWorld.main
