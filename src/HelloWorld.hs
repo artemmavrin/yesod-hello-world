@@ -10,6 +10,8 @@ import Data.Maybe (fromMaybe)
 import Data.Text (Text)
 import Yesod
 
+import qualified PostHello (name)
+
 data HelloWorld = HelloWorld
 
 mkYesod "HelloWorld" $(parseRoutesFile "config/routes.yesodroutes")
@@ -18,6 +20,9 @@ instance Yesod HelloWorld
 
 getHelloR :: Handler TypedContent
 getHelloR = lookupGetParam "name" >>= greet . fromMaybe "World"
+
+postHelloR :: Handler TypedContent
+postHelloR = requireCheckJsonBody >>= greet . PostHello.name
 
 getHelloNamedR :: Text -> Handler TypedContent
 getHelloNamedR = greet
