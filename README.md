@@ -11,6 +11,17 @@ Start the server locally at [`http://localhost:3000`](http://localhost:3000) usi
 stack run
 ```
 
+## Development
+
+* Install `yesod` command line tool
+  ```bash
+  stack install yesod-bin --install-ghc
+  ```
+* Run Yesod development server (which recompiles the source code when a tracked file changes)
+  ```bash
+  stack exec -- yesod devel
+  ```
+
 ## Request/response examples
 
 Valid routes are defined at [`config/routes.yesodroutes`](config/routes.yesodroutes).
