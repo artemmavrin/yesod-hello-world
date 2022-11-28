@@ -25,4 +25,3 @@ cabal.project.local
 cabal.project.local~
 cabal.sandbox.config
 dist*
-yesod-devel
