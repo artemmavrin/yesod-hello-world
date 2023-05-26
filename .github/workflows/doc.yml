@@ -25,7 +25,7 @@ jobs:
           echo "<meta http-equiv=\"refresh\" content=\"0; url=./yesod-hello-world-$(stack ls dependencies | grep yesod-hello-world | awk '{print $2}')/\" />" >> docs/index.html
 
       - name: Deploy docs
-        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        uses: JamesIves/github-pages-deploy-action@v4.4.2
         with:
           branch: gh-pages
           folder: docs
